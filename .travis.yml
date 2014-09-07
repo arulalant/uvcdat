@@ -14,5 +14,6 @@ script:
     - mkdir _build
     - cd _build
     - cmake -DGIT_PROTOCOL=git:// -DCDAT_BUILD_MODE=LEAN -DCDAT_BUILD_GRAPHICS=ON -DCDAT_BUILD_SCIPY=OFF ../uvcdat
+    - source _build/install/bin/setup_runtime.sh
     - ctest -VV -S ../uvcdat/CMake/travis_build.cmake
     - ctest -VV -S ../uvcdat/CMake/travis_submit.cmake
